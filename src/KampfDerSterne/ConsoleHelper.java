@@ -22,7 +22,7 @@ public class ConsoleHelper {
                                         "tragen." },
                         { "Doch", "sei", "gewarnt...", "wenn", "du", "gegen", "ein", "Monster", "verlierst",
                                         "passieren", "\u001B[31m",
-                                        "schlimme", "Dinge.","\u001B[0m" },
+                                        "schlimme", "Dinge.", "\u001B[0m" },
                         { "Viel", "Glück...", "Achso", "wie", "war", "nochmal", "dein", "Name?" }
         };
 
@@ -46,15 +46,18 @@ public class ConsoleHelper {
                         { "Du", "befindest", "dich", "in", "deinem", "Raumschiff", "und", "fliegst", "verloren",
                                         "durch", "das",
                                         "Weltall." },
-                        { "Du", "siehst", "ein", "paar","\u001B[31m", "Planeten", "\u001B[0m", "in", "der", "Ferne.", "Welchen", "möchtest", "du",
+                        { "Du", "siehst", "ein", "paar", "\u001B[31m", "Planeten", "\u001B[0m", "in", "der", "Ferne.",
+                                        "Welchen", "möchtest", "du",
                                         "anfliegen?" }
         };
         public String[][] invalidPlanetSelectionText = {
                         { "Um", "ehrlich", "zu", "sein", "weiß", "ich", "nicht", "wie", "du", "hier", "überleben",
                                         "willst,",
-                                        "wenn", "du", "nichtmal", "eine", "Zahl", "zwischen", "\u001B[31m", "1", "bis", "","\u001B[0m",
-                                        "eingeben", "kannst", "..."},
-                        { "Naja", "selbst", "ein","\u001B[31m", "blindes", "Huhn", "\u001B[0m","findet", "mal", "ein", "Korn.", "Versuch", "es",
+                                        "wenn", "du", "nichtmal", "eine", "Zahl", "zwischen", "\u001B[31m", "1", "bis",
+                                        "", "\u001B[0m",
+                                        "eingeben", "kannst", "..." },
+                        { "Naja", "selbst", "ein", "\u001B[31m", "blindes", "Huhn", "\u001B[0m", "findet", "mal", "ein",
+                                        "Korn.", "Versuch", "es",
                                         "nochmal." }
         };
         public String[][] playerGreetingText = {
@@ -72,7 +75,6 @@ public class ConsoleHelper {
         public String[][] planetLandingText = {
                         { "Du", "bist", "auf", "dem", "Planeten", "", "gelandet." }
         };
-
 
         public String[][] PlanetFinishedText = {
                         { "Du", "hast", "alle", "Monster", "auf", "", "besiegt!", "Du", "bist", "bereit", "für", "die",
@@ -111,71 +113,60 @@ public class ConsoleHelper {
         public String[][] itemExchangeText = {
                         { "Du", "hast", "den", "Gegenstand:", "\u001B[31m", "", "\u001B[0m", "abgelegt." },
                         { "Du", "hast", "den", "Gegenstand:", "\u001B[31m", "", "\u001B[0m", "aufgenommen." },
-                        { "Deine", "Stärke", "beträgt", "nun", "\u001B[31m", "", "\u001B[0m"},
+                        { "Deine", "Stärke", "beträgt", "nun", "\u001B[31m", "", "\u001B[0m" },
                         { "Hoffen", "wir", "mal", "das", "war", "eine", "gute", "Entscheidung..." }
         };
         public String[][] lostItemText = {
-                        { "Tja,", "das", "Monster: ","\u001B[31m", "", "\u001B[0m", " hat", "dich", "erwischt", "...", "wie", "vorhergesagt!"}
-                       ,{ "Hättest", "du", "mal", "besser", "auf", "unsere", "Warnung", "gehört."},
-                        { "Du", "verlierst", "den", "Gegenstand:","\u001B[31m", "", "\u001B[0m"},
-                        {"Versuch's", "nochmal,", "vielleicht", "lernst", "du","ja", "draus." }
+                        { "Tja,", "das", "Monster: ", "\u001B[31m", "", "\u001B[0m", " hat", "dich", "erwischt", "...",
+                                        "wie", "vorhergesagt!" },
+                        { "Hättest", "du", "mal", "besser", "auf", "unsere", "Warnung", "gehört." },
+                        { "Du", "verlierst", "den", "Gegenstand:", "\u001B[31m", "", "\u001B[0m" },
+                        { "Versuch's", "nochmal,", "vielleicht", "lernst", "du", "ja", "draus." }
         };
         public String[][] noItemToLossText = {
-                        { "Puh,", "das", "Monster:", "\u001B[31m", "", "\u001B[0m", " hat", "dich", "erledigt!", "Wenigstens", "hattest", "du", "nichts", "Wertvolles", "dabei."},
-                        { "Versuch's", "einfach", "nochmal", "-", "schlechter", "kann's", "ja", "kaum", "werden!"}
+                        { "Puh,", "das", "Monster:", "\u001B[31m", "", "\u001B[0m", " hat", "dich", "erledigt!",
+                                        "Wenigstens", "hattest", "du", "nichts", "Wertvolles", "dabei." },
+                        { "Versuch's", "einfach", "nochmal", "-", "schlechter", "kann's", "ja", "kaum", "werden!" }
         };
         public String[][] removeItemText = {
-                { "Wie,", "du", "meinst,", "aber", "ich", "hätte", "das", "nicht", "gemacht", },
-                { "Du", "hast", "den", "Gegenstand:", "\u001B[31m", "", "\u001B[0m", "abgelegt." },
-                { "Deine", "Stärke", "beträgt", "nun", "\u001B[31m", "", "\u001B[0m" }
-        };        
+                        { "Wie,", "du", "meinst,", "aber", "ich", "hätte", "das", "nicht", "gemacht", },
+                        { "Du", "hast", "den", "Gegenstand:", "\u001B[31m", "", "\u001B[0m", "abgelegt." },
+                        { "Deine", "Stärke", "beträgt", "nun", "\u001B[31m", "", "\u001B[0m" }
+        };
         public String[][] leaveInventoryText = {
-                        { "Tja", "wer", "\u001B[31m", "nichts", "\u001B[0m", "hat", "kann", "auch", "nichts", "ablegen", "...", "oder", "irgendwie", "so." }
+                        { "Tja", "wer", "\u001B[31m", "nichts", "\u001B[0m", "hat", "kann", "auch", "nichts", "ablegen",
+                                        "...", "oder", "irgendwie", "so." }
         };
-        //In diesem Universum gibt es nur Altersangaben in ganzen Zahlen. Das fängt ja schon gut an...
         public String[][] invalidAgeText = {
-                 { "In", "diesem", "Universum", "gibt", "es", "nur", "Altersangaben", "in", "\u001B[31m", "ganzen", "Zahlen.","\u001B[0m", "Das", "fängt", "ja", "schon", "gut", "an..." }
+                        { "In", "diesem", "Universum", "gibt", "es", "nur", "Altersangaben", "in", "\u001B[31m",
+                                        "ganzen", "Zahlen.", "\u001B[0m", "Das", "fängt", "ja", "schon", "gut",
+                                        "an..." }
         };
+
+        // Funktionen zum setzte der Texte
         public void setinvalidPlanetSelectionTextWithParameter(int maxInput) {
                 invalidPlanetSelectionText[0][21] = Integer.toString(maxInput);
         }
+
         public void setRemoveItemTextWithParameter(Object gegenstand, Player player) {
                 removeItemText[1][5] = gegenstand.getName();
                 removeItemText[2][5] = String.valueOf(player.getPowerLevel());
         }
 
-
         public void setLostItemTextWithParameters(Object gegenstand, Monster monster) {
                 lostItemText[0][4] = monster.getName();
                 lostItemText[2][5] = gegenstand.getName();
         }
+
         public void setNoItemLossTextWithParameter(Monster monster) {
                 noItemToLossText[0][4] = monster.getName();
         }
+
         public void setItemExchangeTextWithParameter(Object gegenstand1, Object gegenstand2,
                         Player spieler) {
                 itemExchangeText[0][5] = gegenstand1.getName();
                 itemExchangeText[1][5] = gegenstand2.getName();
                 itemExchangeText[2][5] = String.valueOf(spieler.getPowerLevel());
-        }
-        public boolean isInputInRange(String input, int min, int max) {
-                try {
-                        Integer.parseInt(input);
-                        if (Integer.parseInt(input) < min || Integer.parseInt(input) > max) {
-                                return false;
-                        }
-                        return true;
-                } catch (NumberFormatException e) {
-                        return false;
-                }
-        }
-        public boolean isInputInteger(String input){
-                try {
-                        Integer.parseInt(input);
-                        return true;
-                } catch (NumberFormatException e) {
-                        return false;
-                }
         }
 
         public void setFightWonWithFullInventoryTextWithParameter(Object gegenstand, Monster monster) {
@@ -204,7 +195,31 @@ public class ConsoleHelper {
         public void setPlanetFinishedTextWithParameter(Planet planet) {
                 PlanetFinishedText[0][5] = planet.getName();
         }
-        public void clearConsole(){
+
+        // Funktionen zur Überprüfung der Eingabe
+        public boolean isInputInRange(String input, int min, int max) {
+                try {
+                        Integer.parseInt(input);
+                        if (Integer.parseInt(input) < min || Integer.parseInt(input) > max) {
+                                return false;
+                        }
+                        return true;
+                } catch (NumberFormatException e) {
+                        return false;
+                }
+        }
+
+        public boolean isInputInteger(String input) {
+                try {
+                        Integer.parseInt(input);
+                        return true;
+                } catch (NumberFormatException e) {
+                        return false;
+                }
+        }
+
+        // Funktionen zur Textausgabe
+        public void clearConsole() {
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
                 System.out.print("\033[0;0H");
@@ -238,18 +253,23 @@ public class ConsoleHelper {
                 }
                 System.out.flush();
         }
+
         public void writeGameWonMessage() {
-                 String spielGewonnenText = 
-                 "███████╗██████╗ ██╗███████╗██╗          ██████╗ ███████╗██╗    ██╗ ██████╗ ███╗   ██╗███╗   ██╗███████╗███╗   ██╗\r\n"+
-                 "██╔════╝██╔══██╗██║██╔════╝██║         ██╔════╝ ██╔════╝██║    ██║██╔═══██╗████╗  ██║████╗  ██║██╔════╝████╗  ██║\r\n"+
-                 "███████╗██████╔╝██║█████╗  ██║         ██║  ███╗█████╗  ██║ █╗ ██║██║   ██║██╔██╗ ██║██╔██╗ ██║█████╗  ██╔██╗ ██║\r\n"+
-                 "╚════██║██╔═══╝ ██║██╔══╝  ██║         ██║   ██║██╔══╝  ██║███╗██║██║   ██║██║╚██╗██║██║╚██╗██║██╔══╝  ██║╚██╗██║\r\n"+
-                 "███████║██║     ██║███████╗███████╗    ╚██████╔╝███████╗╚███╔███╔╝╚██████╔╝██║ ╚████║██║ ╚████║███████╗██║ ╚████║\r\n";
-                 System.out.print("\033[H\033[2J");
-                 System.out.flush();
-                 System.out.print("\033[0;0H");
-                 System.out.print(spielGewonnenText);
+                String spielGewonnenText = "███████╗██████╗ ██╗███████╗██╗          ██████╗ ███████╗██╗    ██╗ ██████╗ ███╗   ██╗███╗   ██╗███████╗███╗   ██╗\r\n"
+                                +
+                                "██╔════╝██╔══██╗██║██╔════╝██║         ██╔════╝ ██╔════╝██║    ██║██╔═══██╗████╗  ██║████╗  ██║██╔════╝████╗  ██║\r\n"
+                                +
+                                "███████╗██████╔╝██║█████╗  ██║         ██║  ███╗█████╗  ██║ █╗ ██║██║   ██║██╔██╗ ██║██╔██╗ ██║█████╗  ██╔██╗ ██║\r\n"
+                                +
+                                "╚════██║██╔═══╝ ██║██╔══╝  ██║         ██║   ██║██╔══╝  ██║███╗██║██║   ██║██║╚██╗██║██║╚██╗██║██╔══╝  ██║╚██╗██║\r\n"
+                                +
+                                "███████║██║     ██║███████╗███████╗    ╚██████╔╝███████╗╚███╔███╔╝╚██████╔╝██║ ╚████║██║ ╚████║███████╗██║ ╚████║\r\n";
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                System.out.print("\033[0;0H");
+                System.out.print(spielGewonnenText);
         }
+
         public void writeWelcomeMessage() {
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
@@ -289,7 +309,8 @@ public class ConsoleHelper {
                 // Webseite:
                 // https://www.patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Gewonnen
                 // Schriftart: ANSI Shadow
-                String kampfGewonnenText = " ██████╗ ███████╗██╗    ██╗ ██████╗ ███╗   ██╗███╗   ██╗███████╗███╗   ██╗\r\n" +
+                String kampfGewonnenText = " ██████╗ ███████╗██╗    ██╗ ██████╗ ███╗   ██╗███╗   ██╗███████╗███╗   ██╗\r\n"
+                                +
                                 "██╔════╝ ██╔════╝██║    ██║██╔═══██╗████╗  ██║████╗  ██║██╔════╝████╗  ██║\r\n" +
                                 "██║  ███╗█████╗  ██║ █╗ ██║██║   ██║██╔██╗ ██║██╔██╗ ██║█████╗  ██╔██╗ ██║\r\n" +
                                 "██║   ██║██╔══╝  ██║███╗██║██║   ██║██║╚██╗██║██║╚██╗██║██╔══╝  ██║╚██╗██║\r\n" +
@@ -1002,7 +1023,7 @@ public class ConsoleHelper {
                                 "                                   |       `._    `.    \\r\n" +
                                 "                                   `._________`-.   `.   `.___\r\n" +
                                 "                                                  SSt  `------'`\r\n";
-                Bild[36] =      "                        `. ___\r\n" +
+                Bild[36] = "                        `. ___\r\n" +
                                 "                       __,' __`.                _..----....____\r\n" +
                                 "           __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "     _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1016,7 +1037,7 @@ public class ConsoleHelper {
                                 "                                  |       `._    `.    \\r\n" +
                                 "                                  `._________`-.   `.   `.___\r\n" +
                                 "                                                 SSt  `------'`\r\n";
-                Bild[37] =      "                       `. ___\r\n" +
+                Bild[37] = "                       `. ___\r\n" +
                                 "                      __,' __`.                _..----....____\r\n" +
                                 "          __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "    _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1058,7 +1079,7 @@ public class ConsoleHelper {
                                 "                               |       `._    `.    \\r\n" +
                                 "                               `._________`-.   `.   `.___\r\n" +
                                 "                                              SSt  `------'`\r\n";
-                Bild[40] =      "                     `. ___\r\n" +
+                Bild[40] = "                     `. ___\r\n" +
                                 "                    __,' __`.                _..----....____\r\n" +
                                 "        __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "  _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1072,7 +1093,7 @@ public class ConsoleHelper {
                                 "                               |       `._    `.    \\r\n" +
                                 "                               `._________`-.   `.   `.___\r\n" +
                                 "                                              SSt  `------'`\r\n";
-                Bild[41] =      "                    `. ___\r\n" +
+                Bild[41] = "                    `. ___\r\n" +
                                 "                   __,' __`.                _..----....____\r\n" +
                                 "       __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 " _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1086,7 +1107,7 @@ public class ConsoleHelper {
                                 "                              |       `._    `.    \\r\n" +
                                 "                              `._________`-.   `.   `.___\r\n" +
                                 "                                             SSt  `------'`\r\n";
-                Bild[42] =      "                   `. ___\r\n" +
+                Bild[42] = "                   `. ___\r\n" +
                                 "                  __,' __`.                _..----....____\r\n" +
                                 "      __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "_..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1100,7 +1121,7 @@ public class ConsoleHelper {
                                 "                             |       `._    `.    \\r\n" +
                                 "                             `._________`-.   `.   `.___\r\n" +
                                 "                                            SSt  `------'`\r\n";
-                Bild[43] =      "                  `. ___\r\n" +
+                Bild[43] = "                  `. ___\r\n" +
                                 "                 __,' __`.                _..----....____\r\n" +
                                 "     __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1114,7 +1135,7 @@ public class ConsoleHelper {
                                 "                            |       `._    `.    \\r\n" +
                                 "                            `._________`-.   `.   `.___\r\n" +
                                 "                                           SSt  `------'`\r\n";
-                Bild[44] =      "                  `. ___\r\n" +
+                Bild[44] = "                  `. ___\r\n" +
                                 "                 __,' __`.                _..----....____\r\n" +
                                 "     __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1128,7 +1149,7 @@ public class ConsoleHelper {
                                 "                            |       `._    `.    \\r\n" +
                                 "                            `._________`-.   `.   `.___\r\n" +
                                 "                                           SSt  `------'`\r\n";
-                Bild[45] =      "                 `. ___\r\n" +
+                Bild[45] = "                 `. ___\r\n" +
                                 "                __,' __`.                _..----....____\r\n" +
                                 "    __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 ".-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1142,7 +1163,7 @@ public class ConsoleHelper {
                                 "                           |       `._    `.    \\r\n" +
                                 "                           `._________`-.   `.   `.___\r\n" +
                                 "                                          SSt  `------'`\r\n";
-                Bild[46] =      "                `. ___\r\n" +
+                Bild[46] = "                `. ___\r\n" +
                                 "               __,' __`.                _..----....____\r\n" +
                                 "   __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1156,7 +1177,7 @@ public class ConsoleHelper {
                                 "                          |       `._    `.    \\r\n" +
                                 "                          `._________`-.   `.   `.___\r\n" +
                                 "                                         SSt  `------'`\r\n";
-                Bild[47] =      "               `. ___\r\n" +
+                Bild[47] = "               `. ___\r\n" +
                                 "              __,' __`.                _..----....____\r\n" +
                                 "  __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "''-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1170,7 +1191,7 @@ public class ConsoleHelper {
                                 "                         |       `._    `.    \\r\n" +
                                 "                         `._________`-.   `.   `.___\r\n" +
                                 "                                        SSt  `------'`\r\n";
-                Bild[48] =      "              `. ___\r\n" +
+                Bild[48] = "              `. ___\r\n" +
                                 "             __,' __`.                _..----....____\r\n" +
                                 " __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "'-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1184,7 +1205,7 @@ public class ConsoleHelper {
                                 "                        |       `._    `.    \\r\n" +
                                 "                        `._________`-.   `.   `.___\r\n" +
                                 "                                       SSt  `------'`\r\n";
-                Bild[49] =      "             `. ___\r\n" +
+                Bild[49] = "             `. ___\r\n" +
                                 "            __,' __`.                _..----....____\r\n" +
                                 "__...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "-------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1198,7 +1219,7 @@ public class ConsoleHelper {
                                 "                       |       `._    `.    \\r\n" +
                                 "                       `._________`-.   `.   `.___\r\n" +
                                 "                                      SSt  `------'`\r\n";
-                Bild[50] =      "            `. ___\r\n" +
+                Bild[50] = "            `. ___\r\n" +
                                 "           __,' __`.                _..----....____\r\n" +
                                 "_...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "------'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1212,7 +1233,7 @@ public class ConsoleHelper {
                                 "                      |       `._    `.    \\r\n" +
                                 "                      `._________`-.   `.   `.___\r\n" +
                                 "                                     SSt  `------'`\r\n";
-                Bild[51] =      "           `. ___\r\n" +
+                Bild[51] = "           `. ___\r\n" +
                                 "          __,' __`.                _..----....____\r\n" +
                                 "...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "-----'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1226,7 +1247,7 @@ public class ConsoleHelper {
                                 "                     |       `._    `.    \\r\n" +
                                 "                     `._________`-.   `.   `.___\r\n" +
                                 "                                    SSt  `------'`\r\n";
-                Bild[52] =      "          `. ___\r\n" +
+                Bild[52] = "          `. ___\r\n" +
                                 "         __,' __`.                _..----....____\r\n" +
                                 "..--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "----'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1240,7 +1261,7 @@ public class ConsoleHelper {
                                 "                    |       `._    `.    \\r\n" +
                                 "                    `._________`-.   `.   `.___\r\n" +
                                 "                                   SSt  `------'`\r\n";
-                Bild[53] =      "         `. ___\r\n" +
+                Bild[53] = "         `. ___\r\n" +
                                 "        __,' __`.                _..----....____\r\n" +
                                 ".--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "---'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1254,7 +1275,7 @@ public class ConsoleHelper {
                                 "                   |       `._    `.    \\r\n" +
                                 "                   `._________`-.   `.   `.___\r\n" +
                                 "                                  SSt  `------'`\r\n";
-                Bild[54] =      "        `. ___\r\n" +
+                Bild[54] = "        `. ___\r\n" +
                                 "       __,' __`.                _..----....____\r\n" +
                                 "--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "--'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1268,7 +1289,7 @@ public class ConsoleHelper {
                                 "                  |       `._    `.    \\r\n" +
                                 "                  `._________`-.   `.   `.___\r\n" +
                                 "                                 SSt  `------'`\r\n";
-                Bild[55] =      "       `. ___\r\n" +
+                Bild[55] = "       `. ___\r\n" +
                                 "      __,' __`.                _..----....____\r\n" +
                                 "-.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "-'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1282,7 +1303,7 @@ public class ConsoleHelper {
                                 "                 |       `._    `.    \\r\n" +
                                 "                 `._________`-.   `.   `.___\r\n" +
                                 "                                SSt  `------'`\r\n";
-                Bild[56] =      "      `. ___\r\n" +
+                Bild[56] = "      `. ___\r\n" +
                                 "     __,' __`.                _..----....____\r\n" +
                                 ".'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "'   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1296,7 +1317,7 @@ public class ConsoleHelper {
                                 "                |       `._    `.    \\r\n" +
                                 "                `._________`-.   `.   `.___\r\n" +
                                 "                               SSt  `------'`\r\n";
-                Bild[57] =      "     `. ___\r\n" +
+                Bild[57] = "     `. ___\r\n" +
                                 "    __,' __`.                _..----....____\r\n" +
                                 "'``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "   `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1310,7 +1331,7 @@ public class ConsoleHelper {
                                 "               |       `._    `.    \\r\n" +
                                 "               `._________`-.   `.   `.___\r\n" +
                                 "                              SSt  `------'`\r\n";
-                Bild[58] =      "    `. ___\r\n" +
+                Bild[58] = "    `. ___\r\n" +
                                 "   __,' __`.                _..----....____\r\n" +
                                 "``;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "  `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1324,7 +1345,7 @@ public class ConsoleHelper {
                                 "              |       `._    `.    \\r\n" +
                                 "              `._________`-.   `.   `.___\r\n" +
                                 "                             SSt  `------'`\r\n";
-                Bild[59] =      "   `. ___\r\n" +
+                Bild[59] = "   `. ___\r\n" +
                                 "  __,' __`.                _..----....____\r\n" +
                                 "`;.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 " `'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1338,7 +1359,7 @@ public class ConsoleHelper {
                                 "             |       `._    `.    \\r\n" +
                                 "             `._________`-.   `.   `.___\r\n" +
                                 "                            SSt  `------'`\r\n";
-                Bild[60] =      "  `. ___\r\n" +
+                Bild[60] = "  `. ___\r\n" +
                                 " __,' __`.                _..----....____\r\n" +
                                 ";.   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "`'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1352,7 +1373,7 @@ public class ConsoleHelper {
                                 "            |       `._    `.    \\r\n" +
                                 "            `._________`-.   `.   `.___\r\n" +
                                 "                           SSt  `------'`\r\n";
-                Bild[61] =      " `. ___\r\n" +
+                Bild[61] = " `. ___\r\n" +
                                 "__,' __`.                _..----....____\r\n" +
                                 ".   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "'   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1366,7 +1387,7 @@ public class ConsoleHelper {
                                 "           |       `._    `.    \\r\n" +
                                 "           `._________`-.   `.   `.___\r\n" +
                                 "                          SSt  `------'`\r\n";
-                Bild[62] =      "`. ___\r\n" +
+                Bild[62] = "`. ___\r\n" +
                                 "_,' __`.                _..----....____\r\n" +
                                 "   ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "   `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1380,7 +1401,7 @@ public class ConsoleHelper {
                                 "          |       `._    `.    \\r\n" +
                                 "          `._________`-.   `.   `.___\r\n" +
                                 "                         SSt  `------'`\r\n";
-                Bild[63] =      ". ___\r\n" +
+                Bild[63] = ". ___\r\n" +
                                 ",' __`.                _..----....____\r\n" +
                                 "  ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "  `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1394,7 +1415,7 @@ public class ConsoleHelper {
                                 "         |       `._    `.    \\r\n" +
                                 "         `._________`-.   `.   `.___\r\n" +
                                 "                        SSt  `------'`\r\n";
-                Bild[64] =      " ___\r\n" +
+                Bild[64] = " ___\r\n" +
                                 "' __`.                _..----....____\r\n" +
                                 " ,.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 " `'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1408,7 +1429,7 @@ public class ConsoleHelper {
                                 "        |       `._    `.    \\r\n" +
                                 "        `._________`-.   `.   `.___\r\n" +
                                 "                       SSt  `------'`\r\n";
-                Bild[65] =      "__\r\n" +
+                Bild[65] = "__\r\n" +
                                 " __`.                _..----....____\r\n" +
                                 ",.   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "`'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1422,7 +1443,7 @@ public class ConsoleHelper {
                                 "       |       `._    `.    \\r\n" +
                                 "       `._________`-.   `.   `.___\r\n" +
                                 "                      SSt  `------'`\r\n";
-                Bild[66] =      "\r\n" +
+                Bild[66] = "\r\n" +
                                 "__`.                _..----....____\r\n" +
                                 ".   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "'   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1436,7 +1457,7 @@ public class ConsoleHelper {
                                 "      |       `._    `.    \\r\n" +
                                 "      `._________`-.   `.   `.___\r\n" +
                                 "                     SSt  `------'`\r\n";
-                Bild[67] =      "\r\n" +
+                Bild[67] = "\r\n" +
                                 "_`.                _..----....____\r\n" +
                                 "   ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "   `'     O ``-''._   (,;') _,'\r\n" +
@@ -1450,7 +1471,7 @@ public class ConsoleHelper {
                                 "     |       `._    `.    \\r\n" +
                                 "     `._________`-.   `.   `.___\r\n" +
                                 "                    SSt  `------'`\r\n";
-                Bild[68] =      "\r\n" +
+                Bild[68] = "\r\n" +
                                 "`.                _..----....____\r\n" +
                                 "  ;``--..__     .'    ,-._    _.-'\r\n" +
                                 "  `'     O ``-''._   (,;') _,'\r\n" +

@@ -1,17 +1,20 @@
 package KampfDerSterne;
 
 public class Monster {
+    // Attribute
     private String name;
     private int age;
     private int powerLevel;
     private Object loot;
 
+    // Konstruktor
     public Monster(String name, int age, int powerLevel) {
         this.name = name;
         this.age = age;
         this.powerLevel = powerLevel;
     }
 
+    // Methoden
     public String getName() {
         return name;
     }

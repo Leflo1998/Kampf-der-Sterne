@@ -5,12 +5,21 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Player {
+    // Attribute
     private String name;
     private int age;
     private int powerLevel;
     private ArrayList<Object> items = new ArrayList<>();
     private ConsoleHelper consoleHelper = new ConsoleHelper();
 
+    // Konstruktor
+    public Player(String name, int age, int powerLevel) {
+        this.name = name;
+        this.age = age;
+        this.powerLevel = powerLevel;
+    }
+
+    // Methoden
     public String getName() {
         return name;
     }
@@ -62,19 +71,12 @@ public class Player {
         calculatePowerLevel();
     }
 
-    public Player(String name, int age, int powerLevel) {
-        this.name = name;
-        this.age = age;
-        this.powerLevel = powerLevel;
-    }
-
-    /**
-     * 
-     */
+    // Inventory verwalten
     public void manageInventory() {
         boolean leaveInventory = false;
         while (!leaveInventory) {
             consoleHelper.clearConsole();
+            // Item auswählen
             System.out.println("Inventar verwalten");
             int numberOfItems = items.size();
             for (int i = 0; i < items.size(); i++) {
@@ -83,25 +85,34 @@ public class Player {
             }
             System.out.println("[" + (numberOfItems + 1) + "] " + "\u001B[31m" + "Nichts " + "\u001B[0m" + "ablegen");
             String input = System.console().readLine();
-            int inputAsInt = Integer.parseInt(input);
-            if (inputAsInt == numberOfItems + 1) {
-                consoleHelper.writeText(consoleHelper.leaveInventoryText);
-                leaveInventory = true;
+            boolean validInput = consoleHelper.isInputInRange(input, 0, numberOfItems + 1);
+            // Prüfung ob Eingabe gültig ist
+            if (!validInput) {
+                consoleHelper.writeText(consoleHelper.wrongInput);
             } else {
-                if ((inputAsInt > 0) && (inputAsInt <= items.size())) {
-                    consoleHelper.setRemoveItemTextWithParameter(items.get(inputAsInt - 1),
-                            this);
-                    removeItem(items.get(inputAsInt - 1));
-                    consoleHelper.writeText(consoleHelper.removeItemText);
+                int inputAsInt = Integer.parseInt(input);
+                if (inputAsInt == numberOfItems + 1) {
+                    // Inventar verlassen
+                    consoleHelper.writeText(consoleHelper.leaveInventoryText);
+                    leaveInventory = true;
                 } else {
-                    consoleHelper.writeText(consoleHelper.wrongInput);
+                    // Item entfernen
+                    if ((inputAsInt > 0) && (inputAsInt <= items.size())) {
+                        Object removedItem = items.get(inputAsInt - 1);
+                        removeItem(items.get(inputAsInt - 1));
+                        consoleHelper.setRemoveItemTextWithParameter(removedItem,
+                                this);
+                        consoleHelper.writeText(consoleHelper.removeItemText);
+                    }
                 }
             }
         }
     }
 
+    // Item verlieren
     public void dropItem(Monster monster) {
         if (items.size() > 0) {
+            // Zufälliges Item entfernen
             Random random = new Random();
             int maxItemToLoose = items.size();
             int lostItem = random.nextInt(0, maxItemToLoose);
@@ -109,11 +120,13 @@ public class Player {
             items.remove(lostItem);
             consoleHelper.writeText(consoleHelper.lostItemText);
         } else {
+            // Kein Item zum verlieren
             consoleHelper.setNoItemLossTextWithParameter(monster);
             consoleHelper.writeText(consoleHelper.noItemToLossText);
         }
     }
 
+    // Itemaustausch bei vollem Inventar nach Kampf
     public void manageInventoryOverflow(Monster monster) {
         boolean inputValid = false;
         while (!inputValid) {
@@ -155,8 +168,10 @@ public class Player {
         }
     }
 
+    // Kampf
     public boolean fight(Monster monster) {
         if (powerLevel >= monster.getPowerLevel()) {
+            // Kampf gewonnen
             consoleHelper.writeWonMessage();
             try {
                 TimeUnit.SECONDS.sleep(3);
@@ -164,8 +179,10 @@ public class Player {
                 e.printStackTrace();
             }
             if (items.size() >= 3) {
+                // Inventar voll
                 manageInventoryOverflow(monster);
             } else {
+                // Item hinzufügen
                 addItem(monster.getLoot());
                 calculatePowerLevel();
                 consoleHelper.setFightWonTextWithParameters(this, monster);
@@ -173,6 +190,7 @@ public class Player {
             }
             return true;
         } else {
+            // Kampf verloren
             dropItem(monster);
             return false;
         }

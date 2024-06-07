@@ -97,6 +97,7 @@ public class App {
         String name = System.console().readLine();
         String age = "";
         boolean validAge = false;
+        // Eingabe des Alters + Prüfung auf ganze Zahl
         while (!validAge) {
             consoleHelper.writeText(consoleHelper.ageInputText);
             age = System.console().readLine();
@@ -105,13 +106,16 @@ public class App {
                 consoleHelper.writeText(consoleHelper.invalidAgeText);
             }
         }
+        // Spieler erstellen
         Player player = new Player(name, Integer.parseInt(age), 1);
+        // Begrüßung des Spielers
         consoleHelper.setPlayerGreetingTextWithParameter(player);
         consoleHelper.writeText(consoleHelper.playerGreetingText);
-        boolean GameWon = false;
         TimeUnit.SECONDS.sleep(3);
         // Spielstart
+        boolean GameWon = false;
         while (!GameWon) {
+            // Auswahl des Planeten
             consoleHelper.writeText(consoleHelper.planetSelectionText);
             for (int i = 0; i < planetArray.size(); i++) {
                 System.out.println(
@@ -124,8 +128,8 @@ public class App {
             System.out.println("Bitte geben Sie eine ganze Zahl ein:");
             String selectedInput = System.console().readLine();
             boolean validInput = consoleHelper.isInputInRange(selectedInput, 0, planetArray.size() + 1);
-            if (!validInput == true) {
-                consoleHelper.setinvalidPlanetSelectionTextWithParameter(planetArray.size()+1);
+            if (!validInput) {
+                consoleHelper.setinvalidPlanetSelectionTextWithParameter(planetArray.size() + 1);
                 consoleHelper.writeText(consoleHelper.invalidPlanetSelectionText);
             } else {
                 int planetInt = Integer.parseInt(selectedInput);
@@ -136,6 +140,7 @@ public class App {
                 }
             }
         }
+        // Spiel gewonnen
         consoleHelper.writeGameWonMessage();
     }
 }

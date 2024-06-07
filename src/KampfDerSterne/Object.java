@@ -1,9 +1,11 @@
 package KampfDerSterne;
 
 public class Object {
+    // Attribute
     private String name;
     private int powerLevel;
 
+    // Konstruktor
     public Object() {
         this.name = "";
         this.powerLevel = 0;
@@ -16,6 +18,7 @@ public class Object {
         }
     }
 
+    // Methoden
     public String getName() {
         return this.name;
     }
@@ -41,5 +44,4 @@ public class Object {
                 ", kraft=" + powerLevel +
                 '}';
     }
-
 }
