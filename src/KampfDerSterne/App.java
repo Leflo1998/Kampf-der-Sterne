@@ -1,106 +1,141 @@
 package KampfDerSterne;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class App {
     public static void main(String[] args) throws InterruptedException {
         // Initialisierung Planeten
-        Planet Turanus = new Planet("Turanus");
-        Planet Zorgon = new Planet("Zorgon");
-        Planet Heimatplanet = new Planet("Heimatplanet");
+        // Es ist möglich beliebig viele Planeten hinzuzufügen
+        // Es ist möglich beliebig viele Monster hinzuzufügen
+        // Es ist möglich beliebig viele Gegenstände hinzuzufügen
+        Planet turanus = new Planet("Turanus");
+        Planet zorgon = new Planet("Zorgon");
+        Planet mars = new Planet("Mars");
+        Planet heimatplanet = new Planet("Heimatplanet");
         // Initialisierung Monster
         // Turanus
-        Monster Spinne = new Monster("Spinne", 10, 1);
+        Monster spider = new Monster("Spinne", 10, 1);
         Monster Goblin = new Monster("Goblin", 25, 2);
         Monster Ork = new Monster("Ork", 50, 5);
         // Zorgon
-        Monster Drache = new Monster("Drache", 100, 10);
-        Monster Feuergolem = new Monster("Feuergolem", 150, 12);
-        Monster Schattenkrieger = new Monster("Schattenkrieger", 200, 15);
+        Monster dragon = new Monster("Drache", 100, 10);
+        Monster fireGolem = new Monster("Feuergolem", 150, 12);
+        Monster shadowWarrior = new Monster("Schattenkrieger", 200, 14);
         // Heimatplanet
-        Monster Höllenhund = new Monster("Höllenhund", 500, 20);
-        Monster Dämon = new Monster("Dämon", 1000, 25);
-        Monster Katuluk = new Monster("Katuluk", 2000, 200);
+        Monster hellDog = new Monster("Höllenhund", 500, 15);
+        Monster demon = new Monster("Dämon", 1000, 19);
+        Monster Kutuluk = new Monster("Kutuluk", 2000, 30);
+        // Mars
+        Monster donkeyKong = new Monster("Donkey Kong", 100, 10);
+        Monster skorpion = new Monster("Skorpion", 150, 12);
+        Monster alien = new Monster("Alien", 200, 14);
         // Initialisierung Gegenstände
         // Turanus
-        Gegenstand Feuerball = new Gegenstand("Feuerball", 4);
-        Gegenstand Schattenklinge = new Gegenstand("Schattenklinge", 3);
-        Gegenstand Skeletrüstung = new Gegenstand("Skeletrüstung", 4);
+        Object fireball = new Object("Feuerball", 4);
+        Object shadowSword = new Object("Schattenklinge", 6);
+        Object skeletonArmor = new Object("Skeletrüstung", 4);
         // Zorgon
-        Gegenstand Schwert = new Gegenstand("Schwert", 5);
-        Gegenstand Giftzahn = new Gegenstand("Giftzahn", 3);
-        Gegenstand Schild = new Gegenstand("Schild", 2);
+        Object sword = new Object("Schwert", 5);
+        Object poisonFang = new Object("Giftzahn", 3);
+        Object shield = new Object("Schild", 2);
+        // Mars
+        Object banana = new Object("Banane", 1);
+        Object alienBlood = new Object("Alienblut", 6);
+        Object skorpionTail = new Object("Skorpionstachel", 9);
         // Heimatplanet
-        Gegenstand Hundepfeife = new Gegenstand("Hundepfeife der Hölle", 10);
-        Gegenstand Dämonenblut = new Gegenstand("Hundepfeife der Hölle", 15);
-
+        Object hellDogWhistle = new Object("Hundepfeife der Hölle", 10);
+        Object demonicBlood = new Object("Dämonenblut", 15);
         // Monster Loot
         // Turanus
-        Goblin.addLoot(Schwert);
-        Spinne.addLoot(Giftzahn);
-        Ork.addLoot(Schild);
+        Goblin.addLoot(sword);
+        spider.addLoot(poisonFang);
+        Ork.addLoot(shield);
         // Zorgon
-        Feuergolem.addLoot(Feuerball);
-        Schattenkrieger.addLoot(Schattenklinge);
-        Drache.addLoot(Skeletrüstung);
+        fireGolem.addLoot(fireball);
+        shadowWarrior.addLoot(shadowSword);
+        dragon.addLoot(skeletonArmor);
+        // Mars
+        donkeyKong.addLoot(banana);
+        skorpion.addLoot(skorpionTail);
+        alien.addLoot(alienBlood);
         // Heimatplanet
-        Höllenhund.addLoot(Hundepfeife);
-        Dämon.addLoot(Dämonenblut);
+        hellDog.addLoot(hellDogWhistle);
+        demon.addLoot(demonicBlood);
         // Monster hinzufügen
         // Turanus
-        Turanus.addMonster(Spinne);
-        Turanus.addMonster(Goblin);
-        Turanus.addMonster(Ork);
+        turanus.addMonster(spider);
+        turanus.addMonster(Goblin);
+        turanus.addMonster(Ork);
         // Zorgon
-        Zorgon.addMonster(Drache);
-        Zorgon.addMonster(Feuergolem);
-        Zorgon.addMonster(Schattenkrieger);
+        zorgon.addMonster(dragon);
+        zorgon.addMonster(fireGolem);
+        zorgon.addMonster(shadowWarrior);
+        // Mars
+        mars.addMonster(donkeyKong);
+        mars.addMonster(skorpion);
+        mars.addMonster(alien);
         // Heimatplanet
-        Heimatplanet.addMonster(Katuluk);
+        heimatplanet.addMonster(demon);
+        heimatplanet.addMonster(hellDog);
+        heimatplanet.addMonster(Kutuluk);
+        // Alle Planeten in Array liste speichern
+        ArrayList<Planet> planetArray = new ArrayList<>();
+        planetArray.add(turanus);
+        planetArray.add(zorgon);
+        planetArray.add(mars);
+        planetArray.add(heimatplanet);
+        // Initialisierung der Textausgabe
         ConsoleHelper consoleHelper = new ConsoleHelper();
         // Ausgabe des anfangstexts
-        consoleHelper.schreibeLogo();
+        consoleHelper.writeWelcomeMessage();
         TimeUnit.SECONDS.sleep(3);
-        consoleHelper.schreibeText(consoleHelper.anfangstext);
+        consoleHelper.writeText(consoleHelper.initialText);
         TimeUnit.SECONDS.sleep(2);
         // Eingabe zum erstellen des Spielers
-        consoleHelper.schreibeText(consoleHelper.NameEingabeText);
+        consoleHelper.writeText(consoleHelper.nameInputText);
         String name = System.console().readLine();
-        consoleHelper.schreibeText(consoleHelper.alterEingabeText);
-        String alter = System.console().readLine();
-        Mensch spieler = new Mensch(name, Integer.parseInt(alter), 1);
-        consoleHelper.initiasiereAnfangsTextMitParameter(spieler);
-        consoleHelper.schreibeText(consoleHelper.begrueßungSpielerText);
+        String age = "";
+        boolean validAge = false;
+        while (!validAge) {
+            consoleHelper.writeText(consoleHelper.ageInputText);
+            age = System.console().readLine();
+            validAge = consoleHelper.isInputInteger(age);
+            if (!validAge) {
+                consoleHelper.writeText(consoleHelper.invalidAgeText);
+            }
+        }
+        Player player = new Player(name, Integer.parseInt(age), 1);
+        consoleHelper.setPlayerGreetingTextWithParameter(player);
+        consoleHelper.writeText(consoleHelper.playerGreetingText);
         boolean GameWon = false;
         TimeUnit.SECONDS.sleep(3);
         // Spielstart
         while (!GameWon) {
-            consoleHelper.schreibeText(consoleHelper.planetenAuswahlText);
-            System.out.println("[1] " +"\u001B[31m" + Turanus.getName()+ "\u001B[0m");
-            System.out.println("[2] " +"\u001B[31m" + Zorgon.getName()+ "\u001B[0m");
-            System.out.println("[3] " +"\u001B[31m" +  Heimatplanet.getName()+ "\u001B[0m");
-            String input = System.console().readLine();
-            int optionPlanet = Integer.parseInt(input);
-            switch (optionPlanet) {
-                case 1:
-                    Turanus.Landung(spieler);
-                    break;
-                case 2:
-                    Zorgon.Landung(spieler);
-                    break;
-                case 3:
-                    Heimatplanet.Landung(spieler);
-                    break;
-                default:
-                    consoleHelper.schreibeText(consoleHelper.falscheEingabeBeiPlanetenauswahlText);
-                    TimeUnit.SECONDS.sleep(1);
-                    System.out.print(".");
-                    TimeUnit.SECONDS.sleep(1);
-                    System.out.print(".");
-                    TimeUnit.SECONDS.sleep(1);
-                    // consoleHelper.leereKonsole();
-                    break;
+            consoleHelper.writeText(consoleHelper.planetSelectionText);
+            for (int i = 0; i < planetArray.size(); i++) {
+                System.out.println(
+                        "[" + (i + 1) + "] " + "\u001B[31m" + planetArray.get(i).getName() + "\u001B[0m"
+                                + " mit " + "\u001B[31m" + planetArray.get(i).getMonster().size() + "\u001B[0m"
+                                + " Monstern");
+            }
+            System.out.println(
+                    "[" + (planetArray.size() + 1) + "] " + "\u001B[31m" + "Inventar" + "\u001B[0m" + " verwalten");
+            System.out.println("Bitte geben Sie eine ganze Zahl ein:");
+            String selectedInput = System.console().readLine();
+            boolean validInput = consoleHelper.isInputInRange(selectedInput, 0, planetArray.size() + 1);
+            if (!validInput == true) {
+                consoleHelper.setinvalidPlanetSelectionTextWithParameter(planetArray.size()+1);
+                consoleHelper.writeText(consoleHelper.invalidPlanetSelectionText);
+            } else {
+                int planetInt = Integer.parseInt(selectedInput);
+                if (planetInt == planetArray.size() + 1) {
+                    player.manageInventory();
+                } else {
+                    planetArray.get(planetInt - 1).playerLandsOnPlanet(player);
+                }
             }
         }
+        consoleHelper.writeGameWonMessage();
     }
 }

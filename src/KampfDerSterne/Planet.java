@@ -27,43 +27,54 @@ public class Planet {
         return monster;
     }
 
-    public void Landung(Mensch spieler) {
+    public void playerLandsOnPlanet(Player player) {
         ConsoleHelper consoleHelper = new ConsoleHelper();
-        consoleHelper.initiasiereplanetenLandungTextMitParameter(this);
-        consoleHelper.schreibeText(consoleHelper.planetenLandungText);
-        boolean verlassethis = false;
-        while (verlassethis == false) {
-
-            int AnzahlMonster = this.getMonster().size();
-            if (AnzahlMonster == 0) {
-                consoleHelper.schreibeText(consoleHelper.keinMonsterText);
-                verlassethis = true;
+        consoleHelper.printSpaceshipAnimation();
+        consoleHelper.setPlanetLandingTextWithParameter(this);
+        consoleHelper.writeText(consoleHelper.planetLandingText);
+        boolean leavePlanet = false;
+        while (leavePlanet == false) {
+            int numberOfMonsters = this.getMonster().size();
+            if (numberOfMonsters == 0) {
+                consoleHelper.writeText(consoleHelper.noMoreMonstersOnThisPlanetText);
+                leavePlanet = true;
             } else {
-                consoleHelper.schreibeText(consoleHelper.monsterAuswahlText);
-                for (int i = 0; i < AnzahlMonster; i++) {
-                    System.out.println("[" + (i + 1) + "]" + "\u001B[31m" + this.getMonster().get(i).getName()
-                            + "\u001B[0m" + " mit einer Stärke von " + "\u001B[31m" +  this.getMonster().get(i).getKraft()+ "\u001B[0m");
+                consoleHelper.writeText(consoleHelper.MonsterSelectionText);
+                for (int i = 0; i < numberOfMonsters; i++) {
+                    System.out.println("[" + (i + 1) + "] " + "\u001B[31m" + this.getMonster().get(i).getName()
+                            + "\u001B[0m" + " mit einer Stärke von " + "\u001B[31m"
+                            + this.getMonster().get(i).getPowerLevel() + "\u001B[0m");
                 }
-                String AuswahlMonster = System.console().readLine();
-                int optionMonster = Integer.parseInt(AuswahlMonster);
-                boolean kampfGewonnen = spieler.starteKampf(this.getMonster().get(optionMonster - 1));
-                if (kampfGewonnen == false) {
-                    verlassethis = true;
-                    consoleHelper.schreibeText(consoleHelper.kampfVerlorenText);
+                System.out.println("[" + (numberOfMonsters + 1) + "] " + "\u001B[31m" + "Flüchte" + "\u001B[0m"
+                        + " zurück ins Weltall");
+                String selectedInput = System.console().readLine();
+                boolean validInput = consoleHelper.isInputInRange(selectedInput, 0, numberOfMonsters + 1);
+                if (!validInput == true) {
+                    consoleHelper.writeText(consoleHelper.wrongInput);
                 } else {
-                    this.removeMonster(this.getMonster().get(optionMonster - 1));
+                    int selectedInputInt = Integer.parseInt(selectedInput);
+                    if (selectedInputInt == numberOfMonsters + 1) {
+                        leavePlanet = true;
+                        // consoleHelper.writeText(consoleHelper.playerLeftPlanetText);
+                    } else {
+                        boolean fightWon = player.fight(this.getMonster().get(selectedInputInt - 1));
+                        if (fightWon == false) {
+                            leavePlanet = true;
+                        } else {
+                            this.removeMonster(this.getMonster().get(selectedInputInt - 1));
+                        }
+                        if (this.getMonster().size() == 0) {
+                            consoleHelper.setPlanetFinishedTextWithParameter(this);
+                            consoleHelper.writeText(consoleHelper.PlanetFinishedText);
+                            leavePlanet = true;
+                        }
+                        try {
+                            TimeUnit.SECONDS.sleep(2);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
-                if (this.getMonster().size() == 0) {
-                    consoleHelper.initiasiereplanetenBesiegtTextMitParameter(this);
-                    consoleHelper.schreibeText(consoleHelper.planetenBesiegtText);
-                    verlassethis = true;
-                }
-                try {
-                    TimeUnit.SECONDS.sleep(2);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                //consoleHelper.leereKonsole();
             }
         }
     }

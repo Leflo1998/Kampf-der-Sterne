@@ -1,18 +1,18 @@
 package KampfDerSterne;
 
-public class Gegenstand {
+public class Object {
     private String name;
-    private int kraft;
+    private int powerLevel;
 
-    public Gegenstand() {
+    public Object() {
         this.name = "";
-        this.kraft = 0;
+        this.powerLevel = 0;
     }
 
-    public Gegenstand(String name, int kraft) {
+    public Object(String name, int kraft) {
         this.name = name;
         if (kraft > 0) {
-            this.kraft = kraft;
+            this.powerLevel = kraft;
         }
     }
 
@@ -20,17 +20,17 @@ public class Gegenstand {
         return this.name;
     }
 
-    public void setname(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getKraft() {
-        return this.kraft;
+    public int getPowerLevel() {
+        return this.powerLevel;
     }
 
-    public void setKraft(int kraft) {
+    public void setPowerLevel(int kraft) {
         if (kraft > 0) {
-            this.kraft = kraft;
+            this.powerLevel = kraft;
         }
     }
 
@@ -38,7 +38,7 @@ public class Gegenstand {
     public String toString() {
         return "Gegenstand{" +
                 "name='" + name + '\'' +
-                ", kraft=" + kraft +
+                ", kraft=" + powerLevel +
                 '}';
     }
 

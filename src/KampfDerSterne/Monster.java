@@ -2,14 +2,14 @@ package KampfDerSterne;
 
 public class Monster {
     private String name;
-    private int alter;
-    private int kraft;
-    private Gegenstand loot;
+    private int age;
+    private int powerLevel;
+    private Object loot;
 
-    public Monster(String name, int alter, int kraft) {
+    public Monster(String name, int age, int powerLevel) {
         this.name = name;
-        this.alter = alter;
-        this.kraft = kraft;
+        this.age = age;
+        this.powerLevel = powerLevel;
     }
 
     public String getName() {
@@ -20,27 +20,27 @@ public class Monster {
         this.name = name;
     }
 
-    public int getAlter() {
-        return alter;
+    public int getAge() {
+        return age;
     }
 
-    public void setAlter(int alter) {
-        this.alter = alter;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getKraft() {
-        return kraft;
+    public int getPowerLevel() {
+        return powerLevel;
     }
 
-    public Gegenstand getLoot() {
+    public Object getLoot() {
         return loot;
     }
 
-    public void addLoot(Gegenstand gegenstand) {
-        loot = gegenstand;
+    public void addLoot(Object item) {
+        loot = item;
     }
 
-    public void removeLoot(Gegenstand gegenstand) {
+    public void removeLoot(Object item) {
         loot = null;
     }
 }
