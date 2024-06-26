@@ -135,8 +135,8 @@ public class Player {
             for (int i = 0; i < items.size(); i++) {
                 System.out.println(
                         "[" + (i + 1) + "] " + "\u001B[31m" + items.get(i).getName() + "\u001B[0m"
-                                + " mit einer Stärke von " + "\u001B[31m" + items.get(i).getPowerLevel()
-                                + "\u001B[0m");
+                                + " mit einer Stärke von " + "\u001B[31m" + items.get(i).getPowerLevel() 
+                                + "\u001B[0m" + " ablegen");
             }
             System.out.println("[4] " + "\u001B[31m" + "Nichts " + "\u001B[0m" + "ablegen");
             String input = System.console().readLine();
