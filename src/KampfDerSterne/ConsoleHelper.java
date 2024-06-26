@@ -235,7 +235,7 @@ public class ConsoleHelper {
                                 for (char charValue : word.toCharArray()) {
                                         System.out.print(charValue);
                                         try {
-                                                TimeUnit.MILLISECONDS.sleep(1);
+                                                TimeUnit.MILLISECONDS.sleep(40);
                                         } catch (InterruptedException e) {
                                                 e.printStackTrace();
                                         }
